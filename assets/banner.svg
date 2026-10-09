@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/><stop offset=".6" stop-color="#062019"/><stop offset="1" stop-color="#0b3b2c"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" x2="1">
+      <stop offset="0" stop-color="#4ade80"/><stop offset=".5" stop-color="#a7f3d0"/><stop offset="1" stop-color="#22d3ee"/>
+      <animate attributeName="x1" values="-1;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#22c55e" stroke-opacity=".07"/>
+    </pattern>
+    <radialGradient id="glow"><stop offset="0" stop-color="#22c55e" stop-opacity=".35"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></radialGradient>
+    <clipPath id="screen"><rect x="742" y="78" width="356" height="190" rx="4"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <rect width="1200" height="320" fill="url(#grid)"/>
+  <circle cx="920" cy="170" r="230" fill="url(#glow)"/>
+
+  <!-- judul -->
+  <text x="70" y="118" font-family="Consolas, Menlo, monospace" font-size="22" fill="#4ade80" opacity=".85">~/panduan $ cat README.md</text>
+  <text x="68" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" fill="url(#txt)">Termux Linux</text>
+  <text x="70" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="600" fill="#e2e8f0">Distro Guide • proot-distro 5.x</text>
+  <g font-family="Consolas, Menlo, monospace" font-size="18" font-weight="700">
+    <rect x="70" y="250" width="96" height="34" rx="17" fill="#e9541f33" stroke="#e95420"/><text x="118" y="273" text-anchor="middle" fill="#fdba74">Ubuntu</text>
+    <rect x="176" y="250" width="96" height="34" rx="17" fill="#d7075133" stroke="#d70751"/><text x="224" y="273" text-anchor="middle" fill="#fda4af">Debian</text>
+    <rect x="282" y="250" width="96" height="34" rx="17" fill="#3c6eb433" stroke="#3c6eb4"/><text x="330" y="273" text-anchor="middle" fill="#93c5fd">Fedora</text>
+    <rect x="388" y="250" width="72" height="34" rx="17" fill="#367bf033" stroke="#367bf0"/><text x="424" y="273" text-anchor="middle" fill="#bfdbfe">Kali</text>
+    <rect x="470" y="250" width="72" height="34" rx="17" fill="#1793d133" stroke="#1793d1"/><text x="506" y="273" text-anchor="middle" fill="#7dd3fc">Arch</text>
+    <rect x="552" y="250" width="92" height="34" rx="17" fill="#0d597f33" stroke="#38bdf8"/><text x="598" y="273" text-anchor="middle" fill="#bae6fd">Alpine</text>
+  </g>
+
+  <!-- HP dengan terminal -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="5s" repeatCount="indefinite"/>
+    <rect x="726" y="40" width="388" height="258" rx="26" fill="#0b1220" stroke="#334155" stroke-width="3"/>
+    <rect x="742" y="78" width="356" height="190" rx="4" fill="#000"/>
+    <circle cx="760" cy="60" r="6" fill="#ef4444"/><circle cx="780" cy="60" r="6" fill="#eab308"/><circle cx="800" cy="60" r="6" fill="#22c55e"/>
+    <text x="920" y="65" font-family="Consolas, Menlo, monospace" font-size="15" fill="#64748b" text-anchor="middle">Termux</text>
+
+    <g clip-path="url(#screen)" font-family="Consolas, Menlo, monospace" font-size="16">
+      <g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.3s" dur="0.01s" fill="freeze"/>
+        <text x="754" y="104" fill="#4ade80">$ <tspan fill="#e2e8f0">pkg install proot-distro</tspan></text></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.3s" dur="0.01s" fill="freeze"/>
+        <text x="754" y="128" fill="#4ade80">$ <tspan fill="#e2e8f0">pd install ubuntu</tspan></text></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.1s" dur="0.01s" fill="freeze"/>
+        <text x="754" y="152" fill="#94a3b8">[*] Mengunduh image…</text></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.9s" dur="0.01s" fill="freeze"/>
+        <text x="754" y="176" fill="#22d3ee">[✓] Ubuntu siap dipakai</text></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" begin="3.6s" dur="0.01s" fill="freeze"/>
+        <text x="754" y="200" fill="#4ade80">$ <tspan fill="#e2e8f0">pd login ubuntu</tspan></text></g>
+      <g opacity="0"><animate attributeName="opacity" values="0;1" begin="4.4s" dur="0.01s" fill="freeze"/>
+        <text x="754" y="224" fill="#f472b6">root@localhost<tspan fill="#e2e8f0">:~# </tspan></text>
+        <rect x="934" y="211" width="9" height="17" fill="#4ade80"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
+      </g>
+    </g>
+  </g>
+</svg>
